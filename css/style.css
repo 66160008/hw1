@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
     color: #4f4a45;
 }
 
@@ -29,14 +29,18 @@ nav ul {
     margin: 20px 0 0;
 }
 
+nav ul li {
+    margin: 0 15px;
+}
+
 nav ul li a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 1.2em;
 }
 
 nav ul li a:hover {
+    color: #8c7b60;
     text-decoration: underline;
 }
 
@@ -54,11 +58,10 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 1.2em;
-    color: #4f4a45;
     margin-top: 10px;
 }
 
-/* สถานที่ท่องเที่ยว */
+/* ส่วนไฮไลต์สถานที่ */
 .highlights {
     text-align: center;
     padding: 2rem;
@@ -72,8 +75,9 @@ nav ul li a:hover {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* จัดรูปภาพในกริด */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 15px;
+    padding: 0 20px;
 }
 
 .card {
@@ -81,17 +85,19 @@ nav ul li a:hover {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 .card img {
     width: 100%;
-    max-width: 800px;
     height: auto;
     object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .card img:hover {
-    transform: scale(1.05); /* ขยายขนาดรูปภาพเมื่อเลื่อนเมาส์ */
+    transform: scale(1.05);
 }
 
 /* ส่วนติดต่อเรา */
@@ -123,6 +129,7 @@ nav ul li a:hover {
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
 }
 
 .contact-form button {
@@ -133,89 +140,11 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
     background-color: #a89f91;
-}
-
-/* ส่วนฟุตเตอร์ */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* ส่วนหัว */
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-header nav ul li a:hover {
-    color: #8c7b60;
-}
-
-/* ส่วนเนื้อหาหลัก */
-main {
-    padding: 20px;
-}
-
-/* สไตล์ของการ์ดสถานที่ท่องเที่ยว */
-article {
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-article h2 {
-    font-size: 1.8rem;
-    color: #6a5d4d;
-}
-
-article img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-}
-
-article p {
-    line-height: 1.6;
-    margin: 10px 0;
 }
 
 /* ฟุตเตอร์ */
@@ -224,12 +153,14 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: 40px;
+    margin-top: 2rem;
 }
-/* Media Query สำหรับอุปกรณ์ขนาดเล็ก */
+
+/* Media Queries สำหรับหน้าจอขนาดเล็ก */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
+        margin: 10px 0;
     }
 
     .cards {
@@ -242,6 +173,5 @@ footer {
 
     .card img {
         width: 100%;
-        height: auto;
     }
 }
