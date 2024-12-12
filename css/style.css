@@ -1,56 +1,87 @@
+/* ตั้งค่าทั่วไป */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f1e1; /* พื้นหลังเอิร์ทโทน */
+    color: #4f4a45; /* ตัวอักษรสีเข้มเพื่อให้อ่านง่าย */
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav ul li a {
-    color: white;
+  }
+  
+  /* ส่วนหัวของเว็บไซต์ */
+  header {
+    background-color: #8c7b60; /* สีพื้นหลังของหัวเว็บไซต์ */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0;
+  }
+  
+  /* เมนูนำทาง */
+  nav {
+    background-color: #a89f91; /* สีเมนู */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 15px;
     text-decoration: none;
-}
-
-.hero {
+    font-size: 1.2em;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ส่วนที่แสดงรูปภาพ */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* จัดรูปภาพให้เรียงในตาราง */
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* มุมโค้งของรูป */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาบางๆ ให้รูปดูน่าสนใจ */
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05); /* ขยายขนาดรูปเมื่อเลื่อนเมาส์ */
+  }
+  
+  /* ส่วนเนื้อหาบทความ */
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: #6a5d4d;
+  }
+  
+  p {
+    font-size: 1.1em;
+    color: #4f4a45;
+    line-height: 1.8;
+  }
+  
+  /* ส่วนฟุตเตอร์ */
+  footer {
+    background-color: #8c7b60; /* สีฟุตเตอร์ */
+    color: #fff;
     text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4;
-}
-
-.highlights img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-}
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }  
