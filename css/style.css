@@ -9,20 +9,15 @@ body {
 
 /* ส่วนหัวของเว็บไซต์ */
 header {
-    text-align: center;
-    padding: 2rem;
     background-color: #333;
     color: white;
+    padding: 1rem;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin: 0;
 }
 
 /* เมนูนำทาง */
