@@ -84,11 +84,10 @@ nav ul li a:hover {
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    width: 100%; /* ให้ภาพยืดตามความกว้างของ container */
+    max-width: 800px; /* จำกัดขนาดภาพไม่ให้ใหญ่เกินไป */
+    height: auto; /* ความสูงปรับอัตโนมัติเพื่อรักษาสัดส่วน */
+    object-fit: cover; /* ทำให้ภาพไม่ยืดหรือล้น */
 }
 
 .card img:hover {
