@@ -1,134 +1,157 @@
 /* ตั้งค่าทั่วไป */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Kanit', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #4f4a45;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* ส่วนหัวของเว็บไซต์ */
+/* ส่วนหัว */
 header {
-    background-color: #333;
+    background-image: url('https://source.unsplash.com/1600x900/?nature,landscape');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: 5rem 1rem;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3rem;
     margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* เมนูนำทาง */
+nav {
+    background-color: #333;
+    padding: 1rem 0;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 20px 0 0;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #ffcc00;
 }
 
 /* ส่วนฮีโร่ */
 .hero {
     text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4;
+    padding: 3rem 1rem;
 }
 
 .hero h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: #6a5d4d;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #4f4a45;
     margin-top: 10px;
 }
 
-/* สถานที่ท่องเที่ยว */
+/* การ์ดสถานที่ท่องเที่ยว */
 .highlights {
-    text-align: center;
-    padding: 2rem;
+    padding: 3rem 1rem;
+    background-color: #fff;
 }
 
 .highlights h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: #6a5d4d;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* จัดรูปภาพในกริด */
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .card {
     border: 1px solid #ddd;
-    padding: 1rem;
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
 .card img {
     width: 100%;
-    max-width: 800px;
-    height: auto;
+    height: 200px;
     object-fit: cover;
 }
 
-.card img:hover {
-    transform: scale(1.05); /* ขยายขนาดรูปภาพเมื่อเลื่อนเมาส์ */
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
 }
 
 /* ส่วนติดต่อเรา */
 .contact-form {
+    padding: 3rem 1rem;
+    background-color: #f4f4f4;
     text-align: center;
-    padding: 2rem;
 }
 
 .contact-form h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: #6a5d4d;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .contact-form form {
-    display: grid;
-    gap: 15px;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.contact-form label {
-    font-size: 1.1em;
-    color: #4f4a45;
+    display: grid;
+    gap: 15px;
 }
 
 .contact-form input, .contact-form textarea {
     padding: 10px;
-    font-size: 1em;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
 }
 
 .contact-form button {
-    padding: 10px;
-    font-size: 1.2em;
-    background-color: #8c7b60;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background-color: #6a5d4d;
     color: white;
     border: none;
     border-radius: 5px;
@@ -136,10 +159,10 @@ nav ul li a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #a89f91;
+    background-color: #8c7b60;
 }
 
-/* ส่วนฟุตเตอร์ */
+/* ฟุตเตอร์ */
 footer {
     background-color: #333;
     color: white;
@@ -147,6 +170,26 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+footer p {
+    margin: 0;
+}
+
+/* สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
 
 body {
     font-family: Arial, sans-serif;
