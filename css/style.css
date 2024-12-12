@@ -12,7 +12,7 @@ header {
     background-color: #333;
     color: white;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
 }
 
 header h1 {
@@ -54,7 +54,7 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-    font-size: small;
+    font-size: medium;
     color: #6a5d4d;
 }
 
