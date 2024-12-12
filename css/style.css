@@ -47,6 +47,7 @@ nav ul li a:hover {
 /* ส่วนฮีโร่ */
 .hero {
     text-align: center;
+    font-size: larger;
     padding: 2rem;
     background-color: #f4f4f4;
 }
