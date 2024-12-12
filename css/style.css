@@ -105,12 +105,12 @@ nav ul li a:hover {
 }
 
 .card img {
-    width: 100%; /* กำหนดให้รูปภาพมีความกว้าง 100% ของกรอบ */
-    height: auto; /* ให้ความสูงปรับตามสัดส่วน */
-    object-fit: contain; /* ปรับรูปภาพให้พอดีกับกรอบโดยไม่ตัด */
-    border-radius: 8px; /* เพิ่มมุมโค้งนิดหน่อย (ไม่จำเป็นก็ได้) */
-    background-color: #f4f4f4; /* เพิ่มสีพื้นหลังในกรณีที่รูปภาพมีช่องว่าง */
+    width: 100%;
+    height: 300px; /* หากต้องการความสูงที่กำหนดเอง */
+    object-fit: contain;
+    background-color: #f4f4f4;
 }
+
 
 
 .card h3 {
