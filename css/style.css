@@ -48,9 +48,9 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     font-size: larger;
-    forced-color-adjust: white;
+    color: white;
     padding: 2rem;
-    background-color: #6a5d4d;
+    background-color: #333;
 }
 
 .hero h2 {
