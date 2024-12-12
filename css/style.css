@@ -1,87 +1,170 @@
 /* ตั้งค่าทั่วไป */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f1e1; /* พื้นหลังเอิร์ทโทน */
-    color: #4f4a45; /* ตัวอักษรสีเข้มเพื่อให้อ่านง่าย */
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  /* ส่วนหัวของเว็บไซต์ */
-  header {
-    background-color: #8c7b60; /* สีพื้นหลังของหัวเว็บไซต์ */
-    padding: 20px;
+    background-color: #f4f4f4; /* พื้นหลังเบา ๆ */
+    color: #4f4a45;
+}
+
+/* ส่วนหัวของเว็บไซต์ */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     font-size: 2.5em;
-    color: #fff;
     margin: 0;
-  }
-  
-  /* เมนูนำทาง */
-  nav {
-    background-color: #a89f91; /* สีเมนู */
-    padding: 10px;
-    text-align: center;
-  }
-  
-  nav a {
-    color: #fff;
-    margin: 0 15px;
+}
+
+/* เมนูนำทาง */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
+    margin: 0 15px;
     font-size: 1.2em;
-  }
-  
-  nav a:hover {
+}
+
+nav ul li a:hover {
     text-decoration: underline;
-  }
-  
-  /* ส่วนที่แสดงรูปภาพ */
-  .gallery {
+}
+
+/* ส่วนฮีโร่ */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #6a5d4d;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #4f4a45;
+    margin-top: 10px;
+}
+
+/* สถานที่ท่องเที่ยว */
+.highlights {
+    text-align: center;
+    padding: 2rem;
+}
+
+.highlights h2 {
+    font-size: 2.5em;
+    color: #6a5d4d;
+    margin-bottom: 20px;
+}
+
+.cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* จัดรูปภาพให้เรียงในตาราง */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* จัดรูปภาพในกริด */
     gap: 15px;
-    padding: 20px;
-  }
-  
-  .gallery img {
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* มุมโค้งของรูป */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาบางๆ ให้รูปดูน่าสนใจ */
+    object-fit: cover;
+    border-radius: 8px;
     transition: transform 0.3s ease;
-  }
-  
-  .gallery img:hover {
-    transform: scale(1.05); /* ขยายขนาดรูปเมื่อเลื่อนเมาส์ */
-  }
-  
-  /* ส่วนเนื้อหาบทความ */
-  main {
-    padding: 20px;
-  }
-  
-  h2 {
-    font-size: 2em;
+}
+
+.card img:hover {
+    transform: scale(1.05); /* ขยายขนาดรูปภาพเมื่อเลื่อนเมาส์ */
+}
+
+/* ส่วนติดต่อเรา */
+.contact-form {
+    text-align: center;
+    padding: 2rem;
+}
+
+.contact-form h2 {
+    font-size: 2.5em;
     color: #6a5d4d;
-  }
-  
-  p {
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
     font-size: 1.1em;
     color: #4f4a45;
-    line-height: 1.8;
-  }
-  
-  /* ส่วนฟุตเตอร์ */
-  footer {
-    background-color: #8c7b60; /* สีฟุตเตอร์ */
-    color: #fff;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #8c7b60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #a89f91;
+}
+
+/* ส่วนฟุตเตอร์ */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }  
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Media Query สำหรับอุปกรณ์ขนาดเล็ก */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+}
