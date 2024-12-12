@@ -54,12 +54,16 @@ article h2 {
     color: #6a5d4d;
 }
 
+/* รูปภาพที่อยู่ภายในบทความ */
 article img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    display: block;  /* ทำให้รูปภาพเป็น block element */
+    margin-left: auto;  /* จัดให้รูปภาพอยู่ทางซ้าย */
+    margin-right: auto; /* และจัดให้รูปภาพอยู่ทางขวา */
+    max-width: 80%; /* ขนาดสูงสุดของรูปภาพไม่เกิน 80% ของความกว้างของคอนเทนต์ */
+    height: auto; /* ให้ความสูงของรูปภาพยืดหยุ่นตามสัดส่วน */
+    border-radius: 8px; /* เพิ่มขอบมนให้กับรูปภาพ */
 }
+
 
 article p {
     line-height: 1.6;
