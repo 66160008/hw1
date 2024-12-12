@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* พื้นหลังเบา ๆ */
+    background-color: #f4f4f4;
     color: #4f4a45;
 }
 
@@ -84,10 +84,10 @@ nav ul li a:hover {
 }
 
 .card img {
-    width: 100%; /* ให้ภาพยืดตามความกว้างของ container */
-    max-width: 800px; /* จำกัดขนาดภาพไม่ให้ใหญ่เกินไป */
-    height: auto; /* ความสูงปรับอัตโนมัติเพื่อรักษาสัดส่วน */
-    object-fit: cover; /* ทำให้ภาพไม่ยืดหรือล้น */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: cover;
 }
 
 .card img:hover {
@@ -148,26 +148,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* Media Query สำหรับอุปกรณ์ขนาดเล็ก */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h2 {
-        font-size: 2em;
-    }
-
-    .card img {
-        width: 100%;
-        height: auto;
-    }
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -223,15 +203,14 @@ article h2 {
     color: #6a5d4d;
 }
 
-/* รูปภาพที่อยู่ภายในบทความ */
 article img {
-    display: block;  /* ทำให้รูปภาพเป็น block element */
-    margin-left: auto;  /* จัดให้รูปภาพอยู่ทางซ้าย */
-    margin-right: auto; /* และจัดให้รูปภาพอยู่ทางขวา */
-    width: 200%; /* ขนาดความกว้างของรูปภาพ */
-    max-width: 400px; /* จำกัดขนาดความกว้างสูงสุดที่ 400px */
-    height: auto; /* ให้ความสูงของรูปภาพปรับตามสัดส่วน */
-    border-radius: 8px; /* เพิ่มขอบมนให้กับรูปภาพ */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 
 article p {
@@ -247,14 +226,22 @@ footer {
     padding: 1rem;
     margin-top: 40px;
 }
-
 /* Media Query สำหรับอุปกรณ์ขนาดเล็ก */
 @media (max-width: 768px) {
-    header nav ul {
+    nav ul {
         flex-direction: column;
     }
 
-    article {
-        padding: 10px;
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
     }
 }
